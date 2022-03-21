@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+    <title>aplayz corp main - local -</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/fullpage.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery-ui-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
+    <script src="js/fullpage.extensions.min.js"></script>
+    <script src="js/fullpage.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/action.js"></script>
+
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+    
+    <style>
+        .test_box{width: 100%;height: 100vh;border: 10px solid #fff;line-height: 100vh;text-align: center;font-size: 200px;font-weight: 700;color: #fff;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="main02">
+        <div id="header">
+            <div class="hd_inr cf">
+                <div class="logo">
+                    <a href="main01.html">
+                        <img src="images/logo.png" alt="어플레이즈 로고">
+                    </a>
+                </div>
+                <div id="nav">
+                    <div class="gnb">
+                        <ul class="cf">
+                            <li class="gnb_login"><a href="javascript:;">로그인</a></li>
+                            <li class="gnb_join"><a href="javascript:;">회원가입</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="container">
+            <div class="test_wrap">
+                <div class="test_box">box01</div>
+                <div class="test_box">box02</div>
+                <div class="test_box">box03</div>
+                <div class="test_box">box04</div>
+                <div class="test_box">box05</div>
+            </div>
+        </div>
+        
+        <div id="footer">
+            <div class="ft_inr">
+                <div class="ft_top cf">
+                    <ul class="ft_gnb">
+                        <li><a href="javascript:;">서비스 이용약관</a></li>
+                        <li><a href="javascript:;" class="point">개인정보 취급방침</a></li>
+                        <li><a href="javascript:;">제휴문의</a></li>
+                        <li><a href="javascript:;">1:1문의</a></li>
+                        <li><a href="javascript:;">프렌차이즈</a></li>
+                    </ul>
+                    <ul class="ft_sns">
+                        <li><a href="javascript:;"><img src="images/ft_sns_youtube.png" alt="어플레이즈 유투브"></a></li>
+                        <li><a href="javascript:;"><img src="images/ft_sns_facebook.png" alt="어플레이즈 페이스북"></a></li>
+                        <li><a href="javascript:;"><img src="images/ft_sns_instagram.png" alt="어플레이즈 인스타그램"></a></li>
+                    </ul>
+                </div>
+                <div class="ft_info cf">
+                    <address>
+                        <p class="corp_addr">서울특별시 강남구 테헤란로 31 어플레이즈 빌딩 50F</p>
+                        <p class="corp_name">(주) 어플레이즈</p>
+                        <p class="corp_leader">대표 홍길동</p>
+                        <p class="corp_num">사업자 등록번호 : 000-00-000000</p>
+                    </address>
+                    <p class="copyright">Copyright © APLAYZ Co., Ltd. 2022. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    // 마우스휠 가로 테스트
+
+    $(document).ready(function () {
+        let d_width = 0; // 브라우저 가로 
+        let d_height = 0; // 문서 전체의 높이 
+        function tmp() { 
+            // container의 가로사이즈(화면가로 * box 개수) 
+            let con_width = $(window).outerWidth() * $('.test_box').length; 
+
+            $('.test_wrap').css({ 
+                width: con_width, 
+                height: '100vh', 
+                position: 'fixed', 
+                top: 0, 
+                left: 0 
+            }); 
+
+            // css에서 해도 상관없다. 
+            $('.test_box').css({ 
+                width: con_width / $('.test_box').length, 
+                height: '100vh', 
+                float: 'left' 
+            }); 
+
+            // box들을 위로 끌어올렸기 때문에 body의 높이는 100vh나 마찬가지인 상태. 
+            // 그래서 억지로 전체 box들의 세로크기 만큼 body에 줘야한다.(스크롤 내리기위함) 
+            // 이때 높이는 가로영역의 비율과 동일하게 준다. (이후 리미트를 주게 됨으로써 비율의 값이 정해진다.) 
+            $('#container').css({ 
+                height: '100vh' 
+            }); 
+
+            let w_width = $(window).width(); // 화면의 가로값 
+            let w_height = $(window).height() // 화면의 세로값 
+
+            // 스크롤 될때의 리미트 
+            d_width = con_width - w_width; // 전체 가로값 - 현재 화면의 가로값 
+            d_height = $('body').height() - w_height // 전체 세로값 - 현재 화면의 세로값 
+
+        } 
+
+        tmp(); 
+
+        let array = []; 
+        for(let i=0; i<$('.test_box').length; i++) { 
+            array[i] = $('.test_box').eq(i).offset().left 
+        } 
+
+        let chk = true; 
+        $('.test_box').on('mousewheel DOMMouseScroll', function(){ 
+            if(chk) { 
+                // 휠 일정시간동안 막기 
+                chk = false; 
+                setTimeout(function(){ 
+                    chk = true; 
+                }, 500) 
+
+                // 휠 방향 감지(아래: -120, 위: 120) 
+                let w_delta = event.wheelDelta / 120; 
+
+                // 휠 아래로 
+                if(w_delta < 0 && $(this).next().length > 0) { 
+                    $('.test_wrap').animate({ 
+                        left: -array[$(this).index()+1] 
+                    }, 500) } 
+
+                // 휠 위로 
+                else if(w_delta > 0 && $(this).prev().length > 0) { 
+                    $('.test_wrap').animate({ 
+                        left: -array[$(this).index()-1] 
+                    }, 500) 
+                } 
+            } 
+        }); 
+
+        //브라우저를 resize했을시를 대비해 박스의 크기는 다시 구해준다. 
+        $(window).resize(function(){ 
+            for(let i=0; i<$('.test_box').length; i++) { 
+                array[i] = $('.test_box').eq(i).offset().left 
+            } 
+
+            tmp(); 
+        }) 
+    });
+    </script>
+</body>
+
+</html>
