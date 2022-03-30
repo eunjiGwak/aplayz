@@ -1,0 +1,64 @@
+@charset 'utf-8';
+
+html, body{background: #151515;}
+
+#mobileWrap{width: 100%;background: #151515;}
+
+.intro_box{position: relative;height: 100vh;}
+
+.intro{position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 100%;max-width: 720px;margin: auto;text-align: center;}
+.intro .intro_tit{width: 100%;text-align: center;}
+.intro .intro_tit img{width: 100%;}
+
+.intro .intro_img{margin-top: 9.722vw;font-size: 0;}
+.intro .intro_img .img_sale{width: 100%;}
+.intro .intro_img .img_sale img{width: 100%;}
+.intro .intro_img .img_zero_box{position: relative;width: 42.222vw;max-width: 304px;margin: 1.111vw auto 0;font-size: 0;}
+.intro .intro_img .img_zero_box .img_zero{}
+.intro .intro_img .img_zero_box .img_zero img{width: 100%;}
+.intro .intro_img .img_zero_box span{position: absolute;}
+.intro .intro_img .img_zero_box span.img_icon01{top: 0;left: 0;}
+.intro .intro_img .img_zero_box span.img_icon02{top: 0;left: 0;}
+.intro .intro_img .img_zero_box span.img_icon03{top: 0;left: 0;}
+.intro .intro_img .img_zero_box span img{}
+.intro .intro_img .img_btm{width: 44.167vw;margin: 2.778vw auto 0;font-size: 0;}
+.intro .intro_img .img_btm img{width: 100%;}
+
+.intro_btn{position: absolute;bottom: 9.167vw;left: 0;width: 100%;}
+.intro_btn ul{font-size: 0;}
+.intro_btn ul li{display: inline-block;width: 50%;text-align: center;}
+.intro_btn ul li.btn_login{}
+.intro_btn ul li.btn_join{position: relative;}
+.intro_btn ul li.btn_join:after{content: '';position: absolute;top: 50%;left: 0;width: 1px;height: 3.333vw;background: #c4c4c4;-webkit-transform: translate(0,-50%);-ms-transform: translate(0,-50%);-o-transform: translate(0,-50%);transform: translate(0,-50%);}
+.intro_btn ul li a{font-size: 4.444vw;line-height: 6.389vw;font-weight: 500;letter-spacing: -0.005em;}
+
+@media screen and (min-width: 720px) {
+    .intro .intro_img{margin-top: 35px;}
+    .intro_btn{}
+}
+
+@media screen and (min-width: 820px) and (min-height: 600px){
+    .intro{height: 783px;}
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
