@@ -13,7 +13,7 @@ html, body{background: #151515;}
 .intro .intro_img{margin-top: 9.722vw;font-size: 0;}
 .intro .intro_img .img_sale{width: 100%;}
 .intro .intro_img .img_sale img{width: 100%;}
-.intro .intro_img .img_zero_box{position: relative;width: 42.222vw;max-width: 304px;margin: 1.111vw auto 0;font-size: 0;}
+.intro .intro_img .img_zero_box{position: relative;width: 42.222vw;max-width: 304px;margin: 0.370vw auto 0;font-size: 0;}
 .intro .intro_img .img_zero_box .img_zero{}
 .intro .intro_img .img_zero_box .img_zero img{width: 100%;}
 .intro .intro_img .img_zero_box span{position: absolute;}
@@ -71,7 +71,7 @@ transform: translate(-50%,0);}
 @media screen and (min-width: 540px) {
     .intro {backgro und: #fdd;}
     .intro .intro_img{margin-top: 52.5px;}
-    .intro .intro_img .img_zero_box{width: 228px;max-width: 228px;margin: 6px auto 0;}
+    .intro .intro_img .img_zero_box{width: 228px;max-width: 228px;margin: 2px auto 0;}
     
     .intro .intro_img .img_zero_box span.img_icon01{top: 230px;width: 30px;}
     
