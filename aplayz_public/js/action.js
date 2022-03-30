@@ -91,7 +91,7 @@ $(document).ready(function () {
             type: 'bullets',
         },
 
-        autoplay: {
+        autoplay: { 
             delay: 3000,
             disableOnInteraction: false,
         },
